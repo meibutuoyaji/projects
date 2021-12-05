@@ -1,2 +1,3 @@
 # projects
-Collection of my projects
+Collection of my projects.
+
