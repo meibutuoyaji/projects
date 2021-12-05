@@ -1,8 +1,13 @@
  # grep commands
+
+ #grep before(B) Context (C) after (A) of pattern
 • grep -A 3 Midway ~/docs/WWII-report searches WWII-report for the pattern "Midway" and prints the line and the next three lines.
+• grep -B -3 Midway ~/docs/WWII-report
+• grep -C -3 Midway ~/docs/WWII-report shows the specified number of lines preceding and following the matching lines.
+
+
 • grep -a var11 /bin searches all files, including binary files, in the /bin directory for the pattern "var11".
 • grep -c Midway ~/docs/WWII-report shows a number representing the number of times the pattern "Midway" was found in the WWII-report file.
-• grep -C -3 Midway ~/docs/WWII-report shows the specified number of lines preceding and following the matching lines.
 • grep -e '--count' ~/docs/doc1 looks for the pattern "--count" in the doc1 file rather than interpreting it as an option.
 • grep -l -r Midway ~/docs shows the name of all files in the /home/user/docs directory that contain the term "Midway".
 • grep -m 2 battle ~/docs/WWII-report shows only the first two times the term "battle" is found in the file.
@@ -10,8 +15,14 @@
 • grep -r battle ~/docs/ searches the directory and all subdirectories for the term "battle".
 • grep -w tank ~/docs/WWII-report searches only for the whole word "tank" in the file.
 
+#case insensitive search
+ifconfig eth0 | grep -i rx
 
+# exclude capital RX from search result
+ifconfig eth0 | grep -v RX
 
+#count lines
+grep -c  master /etc/salt/minion
 
 
 #egrep
