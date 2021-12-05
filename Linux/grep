@@ -1,0 +1,33 @@
+ # grep commands
+• grep -A 3 Midway ~/docs/WWII-report searches WWII-report for the pattern "Midway" and prints the line and the next three lines.
+• grep -a var11 /bin searches all files, including binary files, in the /bin directory for the pattern "var11".
+• grep -c Midway ~/docs/WWII-report shows a number representing the number of times the pattern "Midway" was found in the WWII-report file.
+• grep -C -3 Midway ~/docs/WWII-report shows the specified number of lines preceding and following the matching lines.
+• grep -e '--count' ~/docs/doc1 looks for the pattern "--count" in the doc1 file rather than interpreting it as an option.
+• grep -l -r Midway ~/docs shows the name of all files in the /home/user/docs directory that contain the term "Midway".
+• grep -m 2 battle ~/docs/WWII-report shows only the first two times the term "battle" is found in the file.
+• grep -n -i customVariable1 ~/java/program1.java shows the line numbers of lines that have the term "customVariable1" in the program1.java file. This ignores the case.
+• grep -r battle ~/docs/ searches the directory and all subdirectories for the term "battle".
+• grep -w tank ~/docs/WWII-report searches only for the whole word "tank" in the file.
+
+
+
+
+
+#egrep
+• egrep ^FAILURE ~/error_logs matches the term "FAILURE" when it is at the beginning of the line in error_logs.
+• egrep tty7$ ~/.bash_history matches the term "tty7" when it is at the end of the line.
+• egrep \<are ~/myfile matches all words or strings that begin with "are" (e.g., "are", "area", and "arena").
+• egrep \>are ~/myfile matches all words or strings that end with "are" (e.g., "are", "hare", and "aware").
+• egrep watche[ds] ~/myfile matches either "watched" or "watches".
+• egrep exhibit[0-9] ~/myfile matches "exhibit1", "exhibit3", or "exhibit8".
+• egrep [^Xx]mas ~/myfile matches "Christmas" but not "xmas" or "Xmas".
+• egrep .are ~/myfile matches "hare" and "care", but not "aware" or "are".
+• egrep file[0-9]+ ~/myfile matches "file0", "file10", and "file15636".
+• egrep fil* ~/myfile matches "fil", "filll", and "fillllllllllllllll".
+• egrep fil.* ~/myfile matches "file", "fill", "file102", and "filings".
+• egrep men|women ~/myfile matches "men" or "women".
+• egrep Hello\? ~/myfile matches "Hello?".
+
+#fgrep
+•fgrep Midway Nimitz ~/docs/myfile searches myfile for lines containing "Midway" or "Nimitz".
