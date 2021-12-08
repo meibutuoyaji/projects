@@ -24,6 +24,34 @@ ifconfig eth0 | grep -v RX
 #count lines
 grep -c  master /etc/salt/minion
 
+# start with "server"
+grep '^server' /etc/ntp.conf
+
+#end with 7
+grep '7$' /etc/logrotate.d/*
+
+#end with 4 or 7
+grep 'rotate [47]$' /etc/logrotate.d/*
+
+
+#show empty line
+grep '^$' /etc/ntp.conf
+
+#show only lines starting with a-z or _
+declare -f | grep '^[a-z_]'
+
+#only grep 'master' word excluding servers
+grep 'server\b'  /etc/salt/minion
+
+#shows server + blank
+grep 'server\s'  /etc/salt/minion
+
+# remove blank for start and end of search
+grep '\bpop[0-9]\b' /etc/services
+
+#inclde
+grep -E '[a-z]{2}[0-9]{1,2}' /etc/services
+
 
 #egrep
 • egrep ^FAILURE ~/error_logs matches the term "FAILURE" when it is at the beginning of the line in error_logs.
