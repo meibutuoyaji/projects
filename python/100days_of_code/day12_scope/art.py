@@ -1,0 +1,6 @@
+logo = """
+
+Guess game
+
+
+"""
